@@ -1,0 +1,85 @@
+<!-- settings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Larry2k's Coding Hub</title>
+  <style>
+    /* ... Existing styles ... */
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"],
+    select {
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+
+    input[type="range"],
+    input[type="text"] {
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Settings</h1>
+  <form>
+    <label>
+      <input type="checkbox" name="enableFeature1"> Enable Feature 1
+    </label>
+    <label>
+      <input type="checkbox" name="enableFeature2"> Enable Feature 2
+    </label>
+    <label>
+      Choose a theme:
+      <br>
+      <input type="radio" name="theme" value="light"> Light
+      <input type="radio" name="theme" value="dark"> Dark
+    </label>
+    <label>
+      Select a language:
+      <br>
+      <select name="language">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+      </select>
+    </label>
+    <label>
+      Adjust volume:
+      <br>
+      <input type="range" name="volume" min="0" max="100" value="50">
+    </label>
+    <label>
+      Adjust brightness:
+      <br>
+      <input type="range" name="brightness" min="0" max="100" value="50">
+    </label>
+    <label>
+      Custom username:
+      <br>
+      <input type="text" name="username" placeholder="Enter your username">
+    </label>
+    <br>
+    <input type="submit" value="Save Settings">
+  </form>
+</body>
+</html>

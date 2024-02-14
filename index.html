@@ -6,30 +6,20 @@
   <title>Welcome to Larry2k's Coding Hub</title>
   <style>
     body {
-      background-color: #f8f8f8;
+      background-color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       margin: 0;
-      opacity: 0; /* Initially set to 0 for fade-in effect */
-      animation: fadeIn 2s ease-in-out forwards; /* Animation for fade-in effect */
+      overflow: hidden;
     }
 
-    h1 {
-      color: #333;
+    h1, p {
+      color: #0f0; /* Green text for a matrix-like feel */
       font-family: 'Arial', sans-serif;
       text-align: center;
-      animation: slideIn 1s ease-in-out forwards; /* Animation for sliding in effect */
-    }
-
-    p {
-      color: #555;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      max-width: 600px;
-      margin: 20px auto;
-      animation: fadeIn 2s ease-in-out 1s forwards; /* Delayed fade-in effect */
+      animation: fadeIn 2s ease-in-out forwards;
     }
 
     @keyframes fadeIn {
@@ -38,14 +28,23 @@
       }
     }
 
-    @keyframes slideIn {
-      from {
-        transform: translateY(-20px);
-        opacity: 0;
-      }
+    /* Matrix-like background effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1600 900"><text x="50%" y="50%" font-size="90" dy=".3em" fill="rgba(0, 255, 0, 0.1)" font-family="Arial, sans-serif" text-anchor="middle">0101010101010101010101010101010101010101010101010101010101010101</text></svg>');
+      z-index: -1;
+      animation: matrix 10s linear infinite;
+    }
+
+    @keyframes matrix {
       to {
-        transform: translateY(0);
-        opacity: 1;
+        transform: translateY(-100%);
       }
     }
   </style>

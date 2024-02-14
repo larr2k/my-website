@@ -6,20 +6,57 @@
   <title>Welcome to Larry2k's Coding Hub</title>
   <style>
     body {
-      background-color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      background-color: #f8f8f8;
       margin: 0;
-      overflow: hidden;
+      font-family: 'Arial', sans-serif;
     }
 
-    h1, p {
-      color: #0f0; /* Green text for a matrix-like feel */
-      font-family: 'Arial', sans-serif;
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
       text-align: center;
-      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #0f0; /* Change color on hover */
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      animation: slideIn 1s ease-in-out forwards;
+    }
+
+    p {
+      color: #555;
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out 1s forwards;
     }
 
     @keyframes fadeIn {
@@ -28,29 +65,29 @@
       }
     }
 
-    /* Matrix-like background effect */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1600 900"><text x="50%" y="50%" font-size="90" dy=".3em" fill="rgba(0, 255, 0, 0.1)" font-family="Arial, sans-serif" text-anchor="middle">0101010101010101010101010101010101010101010101010101010101010101</text></svg>');
-      z-index: -1;
-      animation: matrix 10s linear infinite;
-    }
-
-    @keyframes matrix {
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
       to {
-        transform: translateY(-100%);
+        transform: translateY(0);
+        opacity: 1;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Larry2k's Coding Hub</h1>
+  <header>
+    <h1>Welcome to Larry2k's Coding Hub</h1>
+  </header>
+  
+  <nav>
+    <a href="/">Home</a>
+    <a href="/games">Games</a>
+    <a href="/settings">Settings</a>
+  </nav>
+
   <p>Hey there! I'm Larry2k, and this is my coding hub where creativity meets lines of code. Coding isn't just a hobby for me; it's a journey of exploration and problem-solving. Join me as I dive into the world of algorithms, craft elegant code, and bring innovative ideas to life. Let's embark on this coding adventure together!</p>
 </body>
 </html>
